@@ -4,8 +4,7 @@ import CloseIcon from '@mui/icons-material/Close';
 
 export default function NotesCard({deleteNote,updateCardOpen,notes,returnNote,page,filterNotes}) {
   
-    
-   
+  
   return (<>
   {filterNotes(notes).map((el,i)=>{
    return   ( 

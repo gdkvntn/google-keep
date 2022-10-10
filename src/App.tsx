@@ -9,7 +9,7 @@ import Context from "./context/context";
 
 function App() {
 
-  let [page,setPages]=useState('')
+  let [page,setPages]=useState('/')
 
   const [searchVal,setSearchVal]=useState('')
   const [checked, setChecked] = useState(true);
@@ -72,9 +72,13 @@ function App() {
     },[deleteNotes])
 
   const filterNotes =(arr)=>{
-   return  arr.filter(el=>{
-      return el.title.toLowerCase().includes(searchVal.toLowerCase())
-    })
+    if(arr.length){
+      return  arr.filter(el=>{
+        return el.title.toLowerCase().includes(searchVal.toLowerCase())
+      })
+    }
+    return arr
+   
   }
       
   return (
