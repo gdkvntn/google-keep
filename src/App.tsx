@@ -46,7 +46,7 @@ function App() {
     let deleteNote=(id)=>{
      
       setDeleteNotes(()=>{
-      return  [...deleteNotes,notes.find((el,i)=>i==id)]
+      return  [...deleteNotes,notes.find((el,i)=>i===id)]
       })
        setNotes(notes.filter((el,i)=>i!==id))
        
